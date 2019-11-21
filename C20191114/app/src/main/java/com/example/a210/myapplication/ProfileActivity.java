@@ -26,6 +26,16 @@ public class ProfileActivity extends AppCompatActivity{
 
         Intent it = getIntent();
 
-        int imageNumber = it.getIntExtra("image",0)
+        int imageNumber = it.getIntExtra("image",0);
+        if(imageNumber==0){
+            imageview.setImageDrawable(getResources().getDrawable(R.drawable.p1));
+        }else if(imageNumber==1){
+            imageview.setImageDrawable(getResources().getDrawable(R.drawable.p2));
+        } else if (imageNumber == 2) {
+            imageview.setImageDrawable(getResources().getDrawable(R.drawable.p3));
+        }
+        username.setText(it.getStringExtra("title"));
+        phone.setText(it.getStringExtra("desc"));
+        location.setText(it.getStringExtra("location"));
     }
 }
