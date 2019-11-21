@@ -13,7 +13,7 @@ public class ProfileActivity extends AppCompatActivity{
     TextView username;
     TextView phone;
     TextView location;
-
+    TextView email;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,6 +23,7 @@ public class ProfileActivity extends AppCompatActivity{
         username = (TextView)findViewById(R.id.username);
         phone = (TextView)findViewById(R.id.phone);
         location = (TextView)findViewById(R.id.location);
+        email = (TextView)findViewById(R.id.email);
 
         Intent it = getIntent();
 
@@ -37,5 +38,6 @@ public class ProfileActivity extends AppCompatActivity{
         username.setText(it.getStringExtra("title"));
         phone.setText(it.getStringExtra("desc"));
         location.setText(it.getStringExtra("location"));
+        email.setText(it.getStringExtra("email"));
     }
 }

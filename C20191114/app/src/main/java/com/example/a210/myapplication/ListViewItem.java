@@ -7,6 +7,7 @@ public class ListViewItem {
     private  String titleStr;
     private String descStr;
     private String location;
+    private String email;
 
     public String getLocation() {
         return location;
@@ -40,10 +41,19 @@ public class ListViewItem {
         this.descStr = descStr;
     }
 
-    public void setData(Drawable ic, String title, String Desc, String Location){
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setData(Drawable ic, String title, String Desc, String Location, String email){
         iconDrawable = ic;
         titleStr = title;
         descStr = Desc;
         location = Location;
+        this.email = email;
     }
 }

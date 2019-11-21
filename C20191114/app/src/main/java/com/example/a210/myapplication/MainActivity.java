@@ -50,22 +50,22 @@ public class MainActivity extends AppCompatActivity {
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                     ListViewItem item = (ListViewItem) parent.getItemAtPosition(position);
 
-                    Toast.makeText(MainActivity.this,position + "번째 선택 \n" + item.getTitle() + item.getDesc() + item.getLocation(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this,position + "번째 선택 \n" + item.getTitle() + item.getDesc() + item.getLocation() + item.getEmail(), Toast.LENGTH_SHORT).show();
                 }
             });
         }
 
     private void initialData() {
         data = new ListViewItem();
-        data.setData(getResources().getDrawable(R.drawable.p1),"홍길동", "010-0000-0000", "서울");
+        data.setData(getResources().getDrawable(R.drawable.p1),"홍길동", "010-0000-0000", "서울", "hello@nanana.cmcm");
         arrays.add(data);
 
         data = new ListViewItem();
-        data.setData(getResources().getDrawable(R.drawable.p2),"라마다", "010-1000-0000", "인천");
+        data.setData(getResources().getDrawable(R.drawable.p2),"라마다", "010-1000-0000", "인천", "world@nananan.caca");
         arrays.add(data);
 
         data = new ListViewItem();
-        data.setData(getResources().getDrawable(R.drawable.p1),"이동건", "010-0300-0000", "해남");
+        data.setData(getResources().getDrawable(R.drawable.p1),"이동건", "010-0300-0000", "해남", "ffa@alala.ccaaa");
         arrays.add(data);
         }
 }

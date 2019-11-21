@@ -14,6 +14,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.w3c.dom.Text;
+
 import java.util.ArrayList;
 
 public class ListViewAdapter extends BaseAdapter{
@@ -45,19 +47,21 @@ public class ListViewAdapter extends BaseAdapter{
                 it.putExtra("title", listViewItemList.get(pos).getTitle());
                 it.putExtra("desc", listViewItemList.get(pos).getDesc());
                 it.putExtra("location", listViewItemList.get(pos).getLocation());
-
+                it.putExtra("email", listViewItemList.get(pos).getEmail());
                 context.startActivity(it);
         });
         ImageView iconImageView = (ImageView) convertView.findViewById(R.id.imageView1);
         TextView titleTextView = (TextView) convertView.findViewById(R.id.textView1);
         TextView descTextView = (TextView) convertView.findViewById(R.id.textView2);
         TextView locationTextView = (TextView) convertView.findViewById(R.id.textView3);
+        TextView emailView = (TextView) convertView.findViewById(R.id.textView4);
         ListViewItem listViewItem = listViewItemList.get(position);
 
         iconImageView.setImageDrawable(listViewItem.getIcon());
         titleTextView.setText(listViewItem.getTitle());
         descTextView.setText(listViewItem.getDesc());
         locationTextView.setText(listViewItem.getLocation());
+        emailView.setText(listViewItem.getEmail());
 
         ImageView button = (ImageView)convertView.findViewById(R.id.imageView2);
         button.setOnClickListener(new View.OnClickListener() {
